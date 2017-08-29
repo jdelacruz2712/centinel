@@ -65,4 +65,14 @@ class User extends Authenticatable
         }
       return false;
     }
+
+    public function usersExchange(){
+        return $this
+            ->hasOne('Centinel\UsersExchange');
+    }
+
+    public function usersOrder(){
+        return $this
+            ->hasMany('Centinel\UsersOrder');
+    }
 }

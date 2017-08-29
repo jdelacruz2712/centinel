@@ -4,14 +4,13 @@ namespace Centinel;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UsersExchange extends Model
+class UsersOrder extends Model
 {
     protected $connection   = 'laravel';
-    protected $table        = 'users_exchanges';
-    protected $primaryKey   = 'id';
+    protected $table        = 'users_orders';
     public    $timestamps   = false;
 
     protected $fillable = [
-        'user_id', 'num_exchange',
+        'user_id', 'number_order', 'status', 'date_begin', 'date_finish',
     ];
 }

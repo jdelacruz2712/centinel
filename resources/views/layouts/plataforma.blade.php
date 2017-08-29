@@ -21,11 +21,6 @@
                                 <a>Administrar Cuenta</a>
                                 <ul class="languages hoverSelectorBlock">
                                     <li>
-                                        <a class="settingsProfile" href="javascript:void(0)">
-                                            <i class="fa fa-cog"></i> Editar Perfil
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="javascript:void(0)" onclick="logoutSistema()">
                                             <i class="fa fa-sign-out"></i> Desconectarse
                                         </a>
@@ -61,7 +56,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="javascript:void(0);" class="viewUsers"><i class="fa fa-eye"></i> Visualizar a todos los Usuarios</a>
+                                            <a href="" onclick="bodyModal('div.bodyExchange','user/changeExchange')" data-toggle="modal" data-target=".modalExchange"><i class="fa fa-dollar"></i> Cambiar tipo de Cambio</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -91,5 +86,5 @@
 @include('layouts.recursos.modals')
 <script>
     loadingCss()
-    //loadingSystem('profile/myProfile')
+    loadingSystem('system/viewOrders')
 </script>

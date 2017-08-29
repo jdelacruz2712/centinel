@@ -55,6 +55,26 @@ mix.babel([
 ], 'public/js/centinel.js').version();
 
 mix.babel([
+    'resources/assets/centinel/js/vue/class/vmExchange.js',
+    'resources/assets/centinel/js/vue/vmExchange.js'
+], 'public/js/vueExchange.js');
+
+mix.babel([
+    'resources/assets/centinel/js/vue/class/vmCP.js',
+    'resources/assets/centinel/js/vue/vmCP.js'
+], 'public/js/vueCP.js');
+
+mix.babel([
+    'resources/assets/centinel/js/vue/class/vmExchange.js',
+    'resources/assets/centinel/js/vue/form/vmExchange.js'
+], 'public/js/FormExchange.js');
+
+mix.babel([
+    'resources/assets/centinel/js/vue/class/vmCP.js',
+    'resources/assets/centinel/js/vue/form/vmCP.js'
+], 'public/js/FormCP.js');
+
+mix.babel([
     'resources/assets/centinel/js/app.js',
     'resources/assets/centinel/js/plugins/datepicker.js',
     'resources/assets/centinel/plugins/backstretch/jquery.backstretch.min.js',

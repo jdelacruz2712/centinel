@@ -189,10 +189,10 @@ const singleDate = (nameInput, drops = 'down') => {
             format: 'YYYY-MM-DD'
         },
         singleDatePicker: true,
+        autoUpdateInput: false,
         showDropdowns: true,
         opens: "left",
-        drops: drops,
-        autoApply: false
+        drops: drops
     })
 }
 
@@ -291,6 +291,17 @@ const columnsDatatable = (route) => {
             {data: 'action', name: 'action', orderable: false, searchable: false, className: "text-center"}
         ]
     }
+    if(route === 'listOrders'){
+        columns = [
+            {data: 'id', name: 'id'},
+            {data: 'name_complete', name: 'name_complete'},
+            {data: 'number_cp', name: 'number_cp'},
+            {data: 'fecha_inicio', name: 'fecha_inicio'},
+            {data: 'fecha_finish', name: 'fecha_finish'},
+            {data: 'status', name: 'status', className: "text-center"},
+            {data: 'action', name: 'action', orderable: false, searchable: false, className: "text-center"}
+        ]
+    }
     return columns
 }
 
@@ -363,7 +374,7 @@ const BlockCopyPaste = (e) => {
  */
 const filterNumber = (e) => {
     let key = window.Event ? e.which : e.keyCode
-    return (key >= 48 && key <= 57 || key === 8 || key === 9)
+    return (key >= 48 && key <= 57 || key === 8 || key === 9 || key === 46 || key === 190)
 }
 
 /**
